@@ -594,7 +594,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -1567,6 +1567,29 @@ progress {
   .gy-xl-5 {
     --bs-gutter-y: 3rem;
   }
+}
+
+/* Unificar tamaño de imágenes de proyectos */
+.project-img-container {
+  width: 180px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+.project-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 @media (min-width: 1400px) {
   .col-xxl {
@@ -11751,5 +11774,92 @@ html {
   .profile .dots-4 {
     width: 1.5vw;
     left: -2vw;
+  }
+}
+
+/* Iconos de tecnologías en experiencias */
+.tech-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: #6c757d;
+  transition: color 0.2s;
+}
+.tech-icon:last-child {
+  margin-right: 0;
+}
+.tech-icon:hover {
+  color: #0d6efd;
+}
+
+/* Imagen superior en tarjetas de proyectos (excepto ATS) */
+.project-img-top {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(13,110,253,0.08);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  background: #f8f9fa;
+  display: block;
+}
+.project-card:hover .project-img-top {
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(13,110,253,0.18);
+}
+
+/* Imagen de la Aplicación ATS (más grande y con efecto) */
+.project-img-ats {
+  width: 220px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(13,110,253,0.08);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  background: #f8f9fa;
+  display: block;
+  margin: 0 auto;
+}
+.project-card-ats:hover .project-img-ats {
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(13,110,253,0.18);
+}
+
+/* Responsividad para proyectos y resume */
+@media (max-width: 768px) {
+  .project-img-top {
+    max-height: 180px;
+  }
+  .project-img-container, .project-img-ats {
+    width: 100% !important;
+    max-width: 320px;
+    height: 220px !important;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-img-ats {
+    height: 220px !important;
+    width: 100% !important;
+    max-width: 320px;
+  }
+  .d-flex.flex-md-row.align-items-md-center {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .card-body.p-4, .card-body.p-5 {
+    padding: 1.2rem !important;
+  }
+}
+
+/* Fondo de imagen ATS adaptado a modo nocturno */
+.project-img-ats, .project-img-container {
+  background: #f8f9fa;
+}
+@media (prefers-color-scheme: dark) {
+  .project-img-ats, .project-img-container {
+    background: #23272f;
   }
 }
