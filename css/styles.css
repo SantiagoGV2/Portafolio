@@ -6353,12 +6353,219 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
-@charset "UTF-8";
+  .offcanvas-lg {
+    --bs-offcanvas-height: auto;
+    --bs-offcanvas-border-width: 0;
+    background-color: transparent !important;
+  }
+  .offcanvas-lg .offcanvas-header {
+    display: none;
+  }
+  .offcanvas-lg .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+    background-color: transparent !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .offcanvas-xl {
+    position: fixed;
+    bottom: 0;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: var(--bs-offcanvas-color);
+    visibility: hidden;
+    background-color: var(--bs-offcanvas-bg);
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+@media (max-width: 1199.98px) and (prefers-reduced-motion: reduce) {
+  .offcanvas-xl {
+    transition: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  .offcanvas-xl.offcanvas-start {
+    top: 0;
+    left: 0;
+    width: var(--bs-offcanvas-width);
+    border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 1199.98px) {
+  .offcanvas-xl.offcanvas-end {
+    top: 0;
+    right: 0;
+    width: var(--bs-offcanvas-width);
+    border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 1199.98px) {
+  .offcanvas-xl.offcanvas-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--bs-offcanvas-height);
+    max-height: 100%;
+    border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateY(-100%);
+  }
+}
+@media (max-width: 1199.98px) {
+  .offcanvas-xl.offcanvas-bottom {
+    right: 0;
+    left: 0;
+    height: var(--bs-offcanvas-height);
+    max-height: 100%;
+    border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 1199.98px) {
+  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding) {
+    transform: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show {
+    visibility: visible;
+  }
+}
+@media (min-width: 1200px) {
+  .offcanvas-xl {
+    --bs-offcanvas-height: auto;
+    --bs-offcanvas-border-width: 0;
+    background-color: transparent !important;
+  }
+  .offcanvas-xl .offcanvas-header {
+    display: none;
+  }
+  .offcanvas-xl .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+    background-color: transparent !important;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl {
+    position: fixed;
+    bottom: 0;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: var(--bs-offcanvas-color);
+    visibility: hidden;
+    background-color: var(--bs-offcanvas-bg);
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+@media (max-width: 1399.98px) and (prefers-reduced-motion: reduce) {
+  .offcanvas-xxl {
+    transition: none;
+  }
+}
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl.offcanvas-start {
+    top: 0;
+    left: 0;
+    width: var(--bs-offcanvas-width);
+    border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl.offcanvas-end {
+    top: 0;
+    right: 0;
+    width: var(--bs-offcanvas-width);
+    border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl.offcanvas-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--bs-offcanvas-height);
+    max-height: 100%;
+    border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateY(-100%);
+  }
+}
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl.offcanvas-bottom {
+    right: 0;
+    left: 0;
+    height: var(--bs-offcanvas-height);
+    max-height: 100%;
+    border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding) {
+    transform: none;
+  }
+}
+@media (max-width: 1399.98px) {
+  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show {
+    visibility: visible;
+  }
+}
+@media (min-width: 1400px) {
+  .offcanvas-xxl {
+    --bs-offcanvas-height: auto;
+    --bs-offcanvas-border-width: 0;
+    background-color: transparent !important;
+  }
+  .offcanvas-xxl .offcanvas-header {
+    display: none;
+  }
+  .offcanvas-xxl .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+    background-color: transparent !important;
+  }
+}
+
 /*!
 * Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
 */
+/*!
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+:root {
+  --bs-blue: #1e30f3;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #e21e80;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+}
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -18232,5 +18439,99 @@ html {
 @media (prefers-color-scheme: dark) {
   .project-img-ats, .project-img-container {
     background: #23272f;
+  }
+}
+
+/* =================================== */
+/* == CORRECCIONES PARA RESPONSIVIDAD == */
+/* =================================== */
+
+/* --- AJUSTES GENERALES PARA MÓVIL --- */
+@media (max-width: 991.98px) {
+  /* Reduce el padding (espacio interior) de las tarjetas en pantallas pequeñas */
+  .card-body.p-5 {
+    padding: 2rem 1.5rem !important;
+  }
+
+  /* Ajusta el tamaño de los títulos para que no sean tan grandes en móvil */
+  .display-3 {
+    font-size: 2.8rem;
+  }
+  .display-5 {
+    font-size: 2.2rem;
+  }
+}
+
+/* --- PÁGINA DE INICIO: SECCIÓN DE PERFIL --- */
+@media (max-width: 991.98px) {
+  /* Ocultamos los puntos decorativos en móviles porque ocupan mucho espacio */
+  .profile .dots-1,
+  .profile .dots-2,
+  .profile .dots-3,
+  .profile .dots-4 {
+    display: none;
+  }
+
+  /* Centramos el contenedor del perfil y ajustamos su tamaño */
+  .profile {
+    height: auto;
+    width: 80vw; /* Hacemos el círculo un poco más grande */
+    max-width: 340px; /* Pero le ponemos un límite */
+    margin: 2rem auto 0 auto; /* Centrado y con margen superior */
+  }
+
+  /* Ajustamos la imagen para que se contenga dentro del nuevo círculo */
+  .profile .profile-img {
+    position: relative; /* Dejamos que fluya con normalidad dentro del div */
+    transform: none; /* Eliminamos el transform que la movía */
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+
+/* --- PÁGINA DE EXPERIENCIAS --- */
+@media (max-width: 767.98px) {
+  /* Hacemos los iconos de tecnología más pequeños en móvil */
+  .tech-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  /* Cuando el contenedor de los iconos pasa a la línea de abajo, le damos espacio y lo alineamos */
+  .card-body .d-flex.flex-wrap > div:last-child {
+      margin-top: 1rem;
+      flex-basis: 100%; /* Hacemos que ocupe todo el ancho para alinearlo a la izquierda */
+      justify-content: flex-start;
+      display: flex;
+      flex-wrap: wrap; /* Permitimos que los iconos también se envuelvan si no caben */
+  }
+}
+
+/* --- PÁGINA DE PROYECTOS --- */
+@media (max-width: 767.98px) {
+  /* Para las tarjetas de proyecto, ponemos la imagen arriba y el texto abajo */
+  .card.project-card .d-flex {
+    flex-direction: column !important;
+  }
+
+  /* Ajustamos el contenedor de la imagen del proyecto */
+  .project-img-container {
+    width: 100%; /* Que ocupe todo el ancho de la tarjeta */
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 1.5rem; /* Espacio entre la imagen y el texto */
+  }
+}
+
+/* --- FOOTER: SECCIÓN "CONSTRUYAMOS ALGO JUNTOS" --- */
+@media (max-width: 767.98px) {
+  /* Buscamos esa sección específica por su clase de fondo */
+  aside.bg-gradient-primary-to-secondary {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    text-align: center; /* Forzamos a que todo el texto se centre */
   }
 }
