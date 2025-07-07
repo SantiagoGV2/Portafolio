@@ -44,8 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
             projectIframe.style.display = 'none';
 
             if (youtubeUrl && youtubeUrl.trim() !== "") {
-                // Convertir enlace de YouTube a embed
-                let embedUrl = youtubeUrl.replace("youtu.be/", "www.youtube.com/embed/").replace("watch?v=", "embed/");
+                let embedUrl = youtubeUrl;
+                // Si es un short, conviértelo a embed
+                if (embedUrl.includes('/shorts/')) {
+                    const id = embedUrl.split('/shorts/')[1].split(/[?&]/)[0];
+                    embedUrl = `https://www.youtube.com/embed/${id}`;
+                } else {
+                    embedUrl = embedUrl.replace("youtu.be/", "www.youtube.com/embed/").replace("watch?v=", "embed/");
+                }
                 projectIframe.src = embedUrl + "?autoplay=1";
                 projectIframe.style.display = 'block';
                 var modal = new bootstrap.Modal(videoModal);
