@@ -19,7 +19,7 @@
     </head>
     <body class="d-flex flex-column h-100">
         <header class="py-5">
-            <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 navbar-enhanced">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Portafolio</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -41,16 +41,16 @@
                         <div class="col-lg-7 col-xl-6">
                             <div class="text-center text-lg-start">
                                 <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Diseñador &middot; Desarrollador</div></div>
-                                <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Conoce mis trabajos</span></h1>
+                                <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline typewriter">Conoce mis trabajos</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="pages/resume.html">Experiencias</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="pages/projects.html">Proyectos</a>
+                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder btn-glow" href="pages/resume.html">Experiencias</a>
+                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder btn-glow" href="pages/projects.html">Proyectos</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5 col-xl-6">
-                            <div class="d-flex justify-content-center mt-5 mt-lg-0">
-                                <div class="profile bg-gradient-primary-to-secondary">
+                            <div class="d-flex justify-content-center mt-5 mt-lg-0 animate-on-scroll animate-scale">
+                                <div class="profile bg-gradient-primary-to-secondary particles-bg">
                                     <img class="profile-img img-fluid" src="./assets/img/p-removebg-preview.png" alt="..." />
                                     <div class="dots-1 d-none d-lg-block">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
@@ -161,24 +161,72 @@
                         </div>
                     </div>
                 </div>
-            <section class="py-5">
+            <section class="py-5 animated-gradient">
                 <div class="container px-5">
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-10 col-xl-8">
-                            <div class="text-center my-5">
-                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Sobre Mi</span></h2>
+                            <div class="text-center my-5 animate-on-scroll">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline text-glow">Sobre Mi</span></h2>
                                 <p class="lead fw-light mb-4">Mi nombre es Santiago Garcia Velandia, profesional en <strong>Ingeniería de Software</strong></p>
                                 <p class="text-muted">Soy una persona con habilidades estratégicas para el desarrollo de proyectos capaz de dar diferentes soluciones y de detectar cualquier problema. Con bases en lenguajes como Java, JavaScript, bases de datos, lenguajes de etiquetas y C++, como también bases en diagramas UML y un buen desarrollo en el entorno trabajo en equipo.</p>
                                 <div class="d-flex justify-content-center fs-2 gap-4">
-                                    <a class="text-gradient" href="www.linkedin.com/in/santiago-garcia-b87325260"><i class="bi bi-linkedin"></i></a>
-                                    <a class="text-gradient" href="https://github.com/SantiagoGV2"><i class="bi bi-github"></i></a>
+                                    <a class="text-gradient" href="www.linkedin.com/in/santiago-garcia-b87325260"><i class="bi bi-linkedin icon-rotate"></i></a>
+                                    <a class="text-gradient" href="https://github.com/SantiagoGV2"><i class="bi bi-github icon-rotate"></i></a>
                                 </div>
                                 <div class="mt-4">
-                                    <a href="assets/pdf/Hoja de vida.pdf" id="cv-download-btn" class="btn btn-primary btn-lg px-4" download>
-                                        <i class="bi bi-download me-2"></i> Descargar CV
+                                    <a href="assets/pdf/Hoja de vida.pdf" id="cv-download-btn" class="btn btn-primary btn-lg px-4 btn-glow" download>
+                                        <i class="bi bi-download me-2 icon-bounce"></i> Descargar CV
                                     </a>
                                 </div>
                                 <div id="cv-download-count" class="mt-2 text-muted small"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección de Referencias -->
+            <section class="referencias-section">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-8">
+                            <div class="text-center my-5 animate-on-scroll">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline text-glow">Referencias</span></h2>
+                                <p class="lead fw-light mb-4">Comentarios de personas con las que he trabajado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5 gy-4 justify-content-center">
+                        <div class="col-md-6 col-lg-4 animate-on-scroll animate-left">
+                            <div class="card referencia-card h-100 shadow border-0 card-hover-effect">
+                                <div class="referencia-quote">&#10077;</div>
+                                <div class="card-body position-relative">
+                                    <p class="card-text">"Trabajar con Santiago fue una experiencia excelente. Siempre mostró profesionalismo y dedicación en cada proyecto."</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-end">
+                                    <small class="text-muted">- Laura Martínez, Gerente de Proyectos</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 animate-on-scroll">
+                            <div class="card referencia-card h-100 shadow border-0 card-hover-effect">
+                                <div class="referencia-quote">&#10077;</div>
+                                <div class="card-body position-relative">
+                                    <p class="card-text">"Santiago tiene una gran capacidad para resolver problemas y trabajar en equipo. Lo recomiendo totalmente."</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-end">
+                                    <small class="text-muted">- Carlos Ramírez, Líder Técnico</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 animate-on-scroll animate-right">
+                            <div class="card referencia-card h-100 shadow border-0 card-hover-effect">
+                                <div class="referencia-quote">&#10077;</div>
+                                <div class="card-body position-relative">
+                                    <p class="card-text">"Su creatividad y compromiso marcaron la diferencia en nuestro proyecto. ¡Excelente profesional!"</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-end">
+                                    <small class="text-muted">- Ana Gómez, Directora de Desarrollo</small>
+                                </div>
                             </div>
                         </div>
                     </div>
