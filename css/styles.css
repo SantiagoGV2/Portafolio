@@ -18387,48 +18387,89 @@ html {
   box-shadow: 0 8px 32px rgba(13,110,253,0.18);
 }
 
-/* Imagen de la Aplicación ATS (más grande y con efecto) */
-.project-img-ats {
-  width: 220px;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 16px rgba(13,110,253,0.08);
-  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
-  background: #f8f9fa;
-  display: block;
-  margin: 0 auto;
-}
 .project-card-ats:hover .project-img-ats {
   transform: scale(1.04);
   box-shadow: 0 8px 32px rgba(13,110,253,0.18);
 }
 
-/* Responsividad para proyectos y resume */
-@media (max-width: 768px) {
-  .project-img-top {
-    max-height: 180px;
+/* ========================================= */
+/* CSS Definitivo para Proyecto ATS          */
+/* ========================================= */
+
+/* --- ESTILOS BASE (ESCRITORIO) --- */
+
+/* Contenedor de la imagen de ATS */
+.project-card-ats .project-img-container {
+  flex: 0 0 auto;
+  width: 220px; /* Ancho original que tenías */
+  margin-right: 1.5rem;
+}
+
+/* La imagen de ATS */
+.project-card-ats .project-img-ats {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+
+/* Contenedor del texto de ATS */
+.project-card-ats .ats-content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
+
+/* Tablets */
+@media (max-width: 991.98px) {
+  .project-card-ats .project-img-container {
+    width: 200px;
   }
-  .project-img-container, .project-img-ats {
-    width: 100% !important;
-    max-width: 320px;
-    height: 220px !important;
-    margin: 0 auto 1rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+/* Tablets en vertical y Móviles */
+@media (max-width: 767.98px) {
+
+  /* Cambia el layout a columna */
+  .project-card-ats .card-body .d-flex {
+    flex-direction: column;
   }
-  .project-img-ats {
-    height: 220px !important;
-    width: 100% !important;
-    max-width: 320px;
+
+  /* Centra el contenedor de la imagen */
+  .project-card-ats .project-img-container {
+    width: 220px; /* Mantenemos un buen tamaño en móvil */
+    margin: 0 auto 1.5rem auto;
   }
-  .d-flex.flex-md-row.align-items-md-center {
-    flex-direction: column !important;
-    align-items: stretch !important;
+
+  /* Ajusta el contenido del texto */
+  .project-card-ats .ats-content {
+    width: 100%;
+    text-align: center;
   }
-  .card-body.p-4, .card-body.p-5 {
-    padding: 1.2rem !important;
+  
+  .project-card-ats .ats-content p,
+  .project-card-ats .ats-content ul {
+    text-align: left;
+  }
+
+  .project-card-ats .ats-content ul {
+    display: inline-block;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .project-card-ats .ats-content ul li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 575.98px) {
+  .project-card-ats .project-img-container {
+    width: 200px;
   }
 }
 

@@ -1,0 +1,107 @@
+/* ========================================= */
+/* CSS Definitivo para TaskGo                */
+/* Versión final y limpia (con efecto hover) */
+/* ========================================= */
+
+/* --- ESTILOS BASE (ESCRITORIO PRIMERO) --- */
+
+/* 1. El contenedor que envuelve la imagen */
+.taskgo-img-container {
+  flex: 0 0 auto; /* Evita que el contenedor se deforme */
+  width: 200px;   /* Ancho por defecto para pantallas de escritorio */
+  margin-right: 1.5rem;
+}
+
+/* 2. La imagen del teléfono */
+.project-img-phone {
+  display: block;
+  width: 100%; /* La imagen siempre ocupará el 100% de su contenedor */
+  height: auto;
+  aspect-ratio: 9 / 19.5; /* Mantiene la forma de teléfono */
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  
+  /* NUEVO: Añadimos una transición suave para que el efecto de zoom no sea brusco */
+  transition: transform 0.3s ease;
+}
+
+/* 3. El contenedor del texto */
+.taskgo-content {
+  flex: 1; /* Permite que ocupe todo el espacio sobrante */
+  min-width: 0; /* La clave para que el texto se ajuste y no se desborde */
+}
+
+/* ========================================= */
+/* === NUEVO: EFECTO HOVER PARA LA IMAGEN ===*/
+/* ========================================= */
+/* Cuando pasamos el mouse sobre la tarjeta de TaskGo... */
+.project-card-taskgo:hover .project-img-phone {
+  /* ...la imagen del teléfono se agranda un poco (5%) */
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(13,110,253,0.18)
+}
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
+
+/* Para tablets medianas (ej. iPad horizontal) */
+@media (max-width: 991.98px) {
+  .taskgo-img-container {
+    width: 180px; /* Hacemos el contenedor de la imagen un poco más pequeño */
+  }
+}
+
+/* Para tablets verticales y móviles (el cambio más grande) */
+@media (max-width: 767.98px) {
+
+  /* Hacemos que el layout principal cambie de fila a columna */
+  .project-card-taskgo .card-body .d-flex {
+    flex-direction: column;
+  }
+
+  /* Ajustamos el contenedor de la imagen para que se centre */
+  .taskgo-img-container {
+    width: 160px; /* Le damos un ancho fijo y legible */
+    margin-right: 0; /* Eliminamos el margen lateral */
+    margin-left: auto;   /* Lo centramos con márgenes automáticos */
+    margin-right: auto;
+    margin-bottom: 1.5rem; /* Creamos espacio debajo, antes del texto */
+  }
+
+  /* Ajustamos el bloque de texto */
+  .taskgo-content {
+    width: 100%;
+    text-align: center; /* Centramos los elementos como títulos e iconos */
+  }
+  
+  /* Nos aseguramos de que los iconos se centren también */
+  .taskgo-content .mb-2 {
+      justify-content: center;
+  }
+
+  /* Para mejor lectura, el párrafo y la lista se alinean a la izquierda */
+  .taskgo-content p,
+  .project-card-taskgo .taskgo-content ul {
+    text-align: left;
+  }
+
+  /* Estilos finales para la lista, para que se vea bien y con viñetas */
+  .project-card-taskgo .taskgo-content ul {
+    display: inline-block; /* Truco para centrar el bloque de la lista */
+    padding-left: 1.5rem;  /* Espacio para las viñetas */
+    margin-top: 1rem;
+  }
+  
+  .project-card-taskgo .taskgo-content ul li {
+    padding-left: 0.5rem; /* Espacio entre la viñeta y el texto */
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Ajustes finos para móviles pequeños */
+@media (max-width: 575.98px) {
+  .taskgo-img-container {
+    width: 140px; /* Hacemos la imagen aún más pequeña */
+  }
+}
