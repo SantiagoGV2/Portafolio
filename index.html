@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Portafolio Personal</title>
+        <meta name="description" content="Portafolio de Santiago Garcia Velandia — Ingeniero de Software con 2.5+ años en desarrollo fullstack, IA aplicada y automatización de procesos. React, Node.js, TypeScript, Spring Boot, Django, AWS y Azure." />
+        <meta name="author" content="Santiago Garcia Velandia" />
+        <meta name="keywords" content="Santiago Garcia, Ingeniero de Software, Fullstack Developer, React, Node.js, TypeScript, Spring Boot, IA, Portafolio, Bogotá, Colombia" />
+
+        <!-- Open Graph / redes sociales -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Santiago Garcia Velandia — Ingeniero de Software" />
+        <meta property="og:description" content="Fullstack Developer & Integration Engineer. Proyectos reales con impacto medible: -83% tiempos operativos, +50 usuarios, integración de microservicios e IA generativa." />
+        <meta property="og:url" content="https://portafolio-santiago-garcia.netlify.app/" />
+        <meta property="og:image" content="https://portafolio-santiago-garcia.netlify.app/assets/img/p-removebg-preview.png" />
+        <meta property="og:locale" content="es_CO" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <title>Santiago Garcia Velandia | Ingeniero de Software</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Custom Google font-->
@@ -25,11 +36,11 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./pages/resume.html">Experiencias</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./pages/projects.html">Proyectos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./pages/contact.html">Contacto</a></li>
-                            <li class="nav-item"><i class="bi bi-moon nav-link" onclick="oscuro()" style="cursor: pointer;"></i></li>
+                            <li class="nav-item"><a class="nav-link nav-link-enhanced active" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-enhanced" href="./pages/resume.html">Experiencias</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-enhanced" href="./pages/projects.html">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-enhanced" href="./pages/contact.html">Contacto</a></li>
+                            <li class="nav-item"><i id="dark-toggle-icon" class="bi bi-moon nav-link" onclick="oscuro()" style="cursor: pointer;" title="Cambiar modo" aria-label="Alternar modo oscuro" role="button"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -40,18 +51,37 @@
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-7 col-xl-6">
                             <div class="text-center text-lg-start">
-                                <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Diseñador &middot; Desarrollador</div></div>
-                                <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline typewriter">Conoce mis trabajos</span></h1>
+                                <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Ingeniero de Software · Fullstack &amp; IA</div></div>
+                                <h1 class="display-3 fw-bolder mb-3"><span class="text-gradient d-inline typewriter">Santiago Garcia</span></h1>
+                                <p class="lead fw-normal text-muted mb-4">Construyo soluciones fullstack con impacto real: integración de microservicios, interfaces intuitivas y automatización asistida por IA.</p>
+                                <div class="hero-stats mb-4">
+                                    <div class="hero-stat">
+                                        <span class="hero-stat-num">2.5+</span>
+                                        <span class="hero-stat-label">años de experiencia</span>
+                                    </div>
+                                    <div class="hero-stat">
+                                        <span class="hero-stat-num">3</span>
+                                        <span class="hero-stat-label">empresas</span>
+                                    </div>
+                                    <div class="hero-stat">
+                                        <span class="hero-stat-num">↓83%</span>
+                                        <span class="hero-stat-label">tiempos operativos</span>
+                                    </div>
+                                    <div class="hero-stat">
+                                        <span class="hero-stat-num">+50</span>
+                                        <span class="hero-stat-label">usuarios impactados</span>
+                                    </div>
+                                </div>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder btn-glow" href="pages/resume.html">Experiencias</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder btn-glow" href="pages/projects.html">Proyectos</a>
+                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder btn-glow" href="pages/resume.html"><i class="bi bi-briefcase-fill me-2"></i>Experiencias</a>
+                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder btn-glow" href="pages/projects.html"><i class="bi bi-code-slash me-2"></i>Proyectos</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5 col-xl-6">
                             <div class="d-flex justify-content-center mt-5 mt-lg-0 animate-on-scroll animate-scale">
                                 <div class="profile bg-gradient-primary-to-secondary particles-bg">
-                                    <img class="profile-img img-fluid" src="./assets/img/p-removebg-preview.png" alt="..." />
+                                    <img class="profile-img img-fluid" src="./assets/img/p-removebg-preview.png" alt="Foto de perfil de Santiago Garcia Velandia, Ingeniero de Software" decoding="async" />
                                     <div class="dots-1 d-none d-lg-block">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
                                             <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
@@ -166,12 +196,14 @@
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-10 col-xl-8">
                             <div class="text-center my-5 animate-on-scroll">
-                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline text-glow">Sobre Mi</span></h2>
-                                <p class="lead fw-light mb-4">Mi nombre es Santiago Garcia Velandia, profesional en <strong>Ingeniería de Software</strong></p>
-                                <p class="text-muted">Soy una persona con habilidades estratégicas para el desarrollo de proyectos capaz de dar diferentes soluciones y de detectar cualquier problema. Con bases en lenguajes como Java, JavaScript, bases de datos, lenguajes de etiquetas y C++, como también bases en diagramas UML y un buen desarrollo en el entorno trabajo en equipo.</p>
-                                <div class="d-flex justify-content-center fs-2 gap-4">
-                                    <a class="text-gradient" href="https://www.linkedin.com/in/santiago-garcia-b87325260/"><i class="bi bi-linkedin icon-rotate"></i></a>
-                                    <a class="text-gradient" href="https://github.com/SantiagoGV2"><i class="bi bi-github icon-rotate"></i></a>
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline text-glow">Sobre mí</span></h2>
+                                <p class="lead fw-light mb-4">Ingeniero de Software con <strong>2.5+ años</strong> desarrollando soluciones fullstack, integrando microservicios y aplicando <strong>IA generativa</strong> para acelerar el desarrollo y elevar la calidad del código.</p>
+                                <p class="text-muted">He contribuido en proyectos reales en tres empresas — desde plataformas CLM empresariales basadas en microservicios (ContractX) hasta sistemas de búsqueda con IA para observatorios universitarios y ecosistemas digitales completos (inventarios, apps móviles, portales web). Mi enfoque es construir sistemas <strong>escalables y mantenibles</strong> que generen impacto medible: reducción de tiempos operativos, automatización de flujos críticos y experiencias de usuario intuitivas.</p>
+                                <p class="text-muted">Trabajo con <strong>React, TypeScript, Node.js, Spring Boot, Django</strong> y múltiples bases de datos (MySQL, MongoDB, PostgreSQL), con experiencia en cloud (AWS, Azure) y metodologías ágiles (Scrum).</p>
+                                <div class="d-flex justify-content-center fs-2 gap-4 mt-4">
+                                    <a class="text-gradient" href="https://www.linkedin.com/in/santiago-garcia-b87325260/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin icon-rotate"></i></a>
+                                    <a class="text-gradient" href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github icon-rotate"></i></a>
+                                    <a class="text-gradient" href="mailto:santigarciavel33@gmail.com" aria-label="Correo"><i class="bi bi-envelope-fill icon-rotate"></i></a>
                                 </div>
                                 <div class="mt-4">
                                     <a href="assets/pdf/currículum.pdf" id="cv-download-btn" class="btn btn-primary btn-lg px-4 btn-glow" download>
@@ -181,6 +213,72 @@
                                 <div id="cv-download-count" class="mt-2 text-muted small"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ¿Qué hago? -->
+            <section class="py-5 services-section">
+                <div class="container px-5">
+                    <div class="text-center mb-5 animate-on-scroll">
+                        <h2 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline text-glow">¿Qué hago?</span></h2>
+                        <p class="lead fw-light text-muted mb-0">Áreas en las que aporto valor a los equipos y proyectos</p>
+                    </div>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-4 animate-on-scroll animate-left">
+                            <div class="service-card h-100">
+                                <div class="service-icon"><i class="bi bi-window-stack"></i></div>
+                                <h3 class="service-title">Frontend &amp; UX</h3>
+                                <p class="service-desc">Interfaces intuitivas y escalables con React, TypeScript y arquitectura de componentes. Rediseño UI/UX con foco en usabilidad y personalización por cliente.</p>
+                                <ul class="service-tags">
+                                    <li>React</li><li>TypeScript</li><li>UI/UX</li><li>Tailwind</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 animate-on-scroll">
+                            <div class="service-card h-100">
+                                <div class="service-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                                <h3 class="service-title">Backend &amp; Microservicios</h3>
+                                <p class="service-desc">Desarrollo e integración de APIs con Node.js, Spring Boot y Django. Diseño de arquitecturas en capas, hexagonales y basadas en microservicios.</p>
+                                <ul class="service-tags">
+                                    <li>Node.js</li><li>Spring Boot</li><li>Django</li><li>REST APIs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 animate-on-scroll animate-right">
+                            <div class="service-card h-100">
+                                <div class="service-icon"><i class="bi bi-robot"></i></div>
+                                <h3 class="service-title">IA &amp; Automatización</h3>
+                                <p class="service-desc">Aplicación de IA generativa (Claude Code, prompt engineering, agentes) para acelerar desarrollo, automatizar reportes y optimizar flujos de trabajo críticos.</p>
+                                <ul class="service-tags">
+                                    <li>Claude Code</li><li>Prompt Eng.</li><li>Agentes</li><li>Automatización</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stack destacado -->
+            <section class="py-5 stack-section">
+                <div class="container px-5">
+                    <div class="text-center mb-5 animate-on-scroll">
+                        <h2 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline text-glow">Stack destacado</span></h2>
+                        <p class="lead fw-light text-muted mb-0">Las tecnologías con las que trabajo día a día</p>
+                    </div>
+                    <div class="stack-grid animate-on-scroll">
+                        <div class="stack-item" title="React"><i class="fa-brands fa-react"></i><span>React</span></div>
+                        <div class="stack-item" title="TypeScript"><i class="fa-solid fa-code"></i><span>TypeScript</span></div>
+                        <div class="stack-item" title="Node.js"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+                        <div class="stack-item" title="Spring Boot"><i class="fa-brands fa-java"></i><span>Spring Boot</span></div>
+                        <div class="stack-item" title="Python / Django"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                        <div class="stack-item" title="Tailwind CSS"><i class="fa-solid fa-wind"></i><span>Tailwind</span></div>
+                        <div class="stack-item" title="MySQL / PostgreSQL / MongoDB"><i class="fa-solid fa-database"></i><span>SQL / NoSQL</span></div>
+                        <div class="stack-item" title="AWS"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+                        <div class="stack-item" title="Azure"><i class="fa-brands fa-microsoft"></i><span>Azure</span></div>
+                        <div class="stack-item" title="Git &amp; GitHub"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                        <div class="stack-item" title="Claude / IA generativa"><i class="bi bi-anthropic"></i><span>Claude</span></div>
+                        <div class="stack-item" title="Figma"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
                     </div>
                 </div>
             </section>
@@ -202,8 +300,14 @@
                                 <div class="card-body position-relative">
                                     <p class="card-text">"Trabajar con Santiago fue una experiencia excelente. Siempre mostró profesionalismo y dedicación en cada proyecto."</p>
                                 </div>
-                                <div class="card-footer bg-transparent border-0 text-end">
-                                    <small class="text-muted">- Cesar Augusto Guerrero, Jefe de Fabrica</small>
+                                <div class="card-footer bg-transparent border-0">
+                                    <div class="ref-author">
+                                        <div class="ref-avatar" aria-hidden="true">CG</div>
+                                        <div class="ref-author-info">
+                                            <div class="ref-author-name">Cesar Augusto Guerrero</div>
+                                            <div class="ref-author-role">Jefe de Fábrica · FuSoft — Uniempresarial</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -213,8 +317,14 @@
                                 <div class="card-body position-relative">
                                     <p class="card-text">"Santiago tiene una gran capacidad para resolver problemas y trabajar en equipo. Lo recomiendo totalmente."</p>
                                 </div>
-                                <div class="card-footer bg-transparent border-0 text-end">
-                                    <small class="text-muted">- Cristian Reyes, Desarrollador Web</small>
+                                <div class="card-footer bg-transparent border-0">
+                                    <div class="ref-author">
+                                        <div class="ref-avatar" aria-hidden="true">CR</div>
+                                        <div class="ref-author-info">
+                                            <div class="ref-author-name">Cristian Reyes</div>
+                                            <div class="ref-author-role">Ingeniero de Software</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -224,8 +334,14 @@
                                 <div class="card-body position-relative">
                                     <p class="card-text">"Su creatividad y compromiso marcaron la diferencia en nuestro proyecto. ¡Excelente profesional!"</p>
                                 </div>
-                                <div class="card-footer bg-transparent border-0 text-end">
-                                    <small class="text-muted">- Brayam Chavarro, Desarrollador Web</small>
+                                <div class="card-footer bg-transparent border-0">
+                                    <div class="ref-author">
+                                        <div class="ref-avatar" aria-hidden="true">BC</div>
+                                        <div class="ref-author-info">
+                                            <div class="ref-author-name">Brayam Chavarro</div>
+                                            <div class="ref-author-role">Desarrollador Web</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +353,7 @@
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div>
-                        <div class="small m-0 text-center">Copyright &copy; Portafolio 2024</div>
+                        <div class="small m-0 text-center">Copyright &copy; Portafolio 2026</div>
                     </div>
                 </div>
             </div>
