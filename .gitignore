@@ -1,0 +1,63 @@
+# =========================================
+# Sistema operativo
+# =========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# =========================================
+# Editores / IDEs
+# =========================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# =========================================
+# Herramientas de IA / asistentes (config local)
+# =========================================
+.claude/
+.cursor/
+.aider*
+
+# =========================================
+# Node / paquetes (por si se agregan más adelante)
+# =========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# =========================================
+# Variables de entorno y secretos
+# =========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# =========================================
+# Documentos fuente del CV (mantener solo el PDF publicado)
+# =========================================
+# El .docx queda en local; en el repo va solo assets/pdf/currículum.pdf
+*.docx
+*.doc
+*.odt
+*.pages
+
+# =========================================
+# Archivos temporales / backups
+# =========================================
+*.tmp
+*.temp
+*.log
+*.bak
+*.old
+*~
