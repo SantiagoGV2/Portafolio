@@ -3,9 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Experiencia profesional y habilidades de Santiago Garcia Velandia." />
+    <meta name="description" content="Experiencia profesional, habilidades, certificaciones e idiomas de Santiago Garcia Velandia — Ingeniero de Software fullstack con experiencia en React, Node.js, TypeScript, Spring Boot, IA generativa y microservicios." />
     <meta name="author" content="Santiago Garcia Velandia" />
-    <title>Portafolio Personal - Experiencias</title>
+    <meta name="keywords" content="experiencia, portafolio, ingeniero de software, fullstack, React, TypeScript, Spring Boot, IA, microservicios" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Experiencias · Santiago Garcia Velandia" />
+    <meta property="og:description" content="3 experiencias profesionales — Frontend Developer en IT EXPERTS (ContractX), Fullstack en FuSoft y Aprendiz en FIBRATELTEC. -83% tiempos, +50 usuarios." />
+    <meta property="og:locale" content="es_CO" />
+    <title>Experiencias · Santiago Garcia Velandia</title>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,12 +28,12 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resume.html">Experiencias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Proyectos</a></li>
-                                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                            <li class="nav-item"><i class="bi bi-moon nav-link" onclick="oscuro()" style="cursor: pointer;"></i></li>
-                        </ul>
+                        <li class="nav-item"><a class="nav-link nav-link-enhanced" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-enhanced active" href="resume.html">Experiencias</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-enhanced" href="projects.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-enhanced" href="contact.html">Contacto</a></li>
+                        <li class="nav-item"><i id="dark-toggle-icon" class="bi bi-moon nav-link" onclick="oscuro()" style="cursor: pointer;" title="Cambiar modo" aria-label="Alternar modo oscuro" role="button"></i></li>
+                    </ul>
                     </div>
             </div>
         </nav>
@@ -41,66 +46,137 @@
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <section class="animate-on-scroll animate-left">
-                        <div class="card shadow border-0 rounded-4 mb-5 card-hover-effect">
-                            <div class="card-body p-5">
-                                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
-                                    <div>
-                                        <h4 class="mb-1">Aprendiz <span class="text-primary">@ FIBRATELTEC S.A.S</span></h4>
-                                        <div class="text-muted small">Bogotá D.C | 2024</div>
-                                    </div>
-                                    <div class="mt-3 mt-md-0">
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
-                                        <i class="fa-brands fa-java tech-icon icon-bounce" title="Java"></i>
-                                        <i class="fa-brands fa-square-js tech-icon icon-bounce" title="JavaScript"></i>
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-php tech-icon icon-bounce" title="PHP"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                        <i class="fa-brands fa-android tech-icon icon-bounce" title="Kotlin"></i>
-                                    </div>
-                                </div>
-                                <p>Desarrollé un sistema de inventario para técnicos de Claro y Movistar, aplicaciones móviles para ATS y gestión de herramientas, y una página web corporativa. El reto principal fue integrar soluciones multiplataforma y optimizar procesos internos.</p>
-                                <ul>
-                                    <li>Reduje el tiempo de entrega de inventarios de 2 días a 4 horas (↓83%).</li>
-                                    <li>Automatización de reportes técnicos, ahorrando 8h/semana al equipo.</li>
-                                    <li>Implementación de autenticación segura para +50 usuarios internos.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
+                    <div class="experience-timeline">
 
-                    <section class="animate-on-scroll">
-                        <div class="card shadow border-0 rounded-4 mb-5 card-hover-effect">
-                            <div class="card-body p-5">
-                                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
-                                    <div>
-                                        <h4 class="mb-1">Desarrollador Full Stack <span class="text-primary">@ FuSoft - Uniempresarial</span></h4>
-                                        <div class="text-muted small">Bogotá D.C | 2025</div>
+                        <article class="timeline-item is-current animate-on-scroll animate-left">
+                            <span class="timeline-marker" aria-hidden="true"></span>
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-title-block">
+                                        <div class="exp-role-line">
+                                            <h4 class="exp-role">Frontend Developer &amp; Integration Engineer</h4>
+                                            <span class="exp-badge-current"><i class="bi bi-star-fill"></i> Más reciente</span>
+                                        </div>
+                                        <div class="exp-company">@ IT EXPERTS S.A.S</div>
                                     </div>
-                                     <div class="mt-3 mt-md-0">
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
-                                        <i class="fa-brands fa-square-js tech-icon icon-bounce" title="JavaScript"></i>
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-java tech-icon icon-bounce" title="Java"></i>
-                                        <i class="fa-brands fa-node-js tech-icon icon-bounce" title="Node.js"></i>
-                                        <i class="fa-brands fa-php tech-icon icon-bounce" title="PHP"></i>
-                                        <i class="fa-brands fa-react tech-icon icon-bounce" title="React"></i>
-                                        <i class="fa-brands fa-python tech-icon icon-bounce" title="Python"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                        <i class="bi bi-anthropic icon-bounce" style="font-size: 20px;" title="Anthropic"></i>
+                                    <div class="exp-meta">
+                                        <span><i class="bi bi-calendar3"></i> Ene 2026 – Jul 2026</span>
+                                        <span class="exp-sep">·</span>
+                                        <span><i class="bi bi-geo-alt"></i> Bogotá D.C</span>
                                     </div>
                                 </div>
-                               <p>Participé en el desarrollo de una plataforma de búsqueda de eventos empresariales con inteligencia artificial para el observatorio de la universidad y colaboré en la creación de una aplicación móvil para implementar un directorio digital.</p>
-                               <ul>
-                                   <li>Automaticé el proceso de actualización del observatorio, reduciendo el tiempo de búsqueda de eventos de varios días a solo segundos.</li>
-                                   <li>Optimicé el trabajo del equipo de recursos humanos al digitalizar y estructurar la información del personal.</li>
-                               </ul>
-                               <a href="https://fabricasoluciones.uniempresarial.edu.co/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm btn-glow">Ver empresa</a>
+                                <p class="exp-summary">Formé parte del equipo de consultoría encargado del rediseño y evolución de <strong>ContractX</strong>, plataforma CLM empresarial basada en microservicios. Lideré el frontend y la integración con el backend, con foco en escalabilidad, mantenibilidad y experiencia de usuario.</p>
+                                <ul class="exp-bullets">
+                                    <li><i class="bi bi-check-circle-fill"></i> Rediseñé la interfaz aplicando principios avanzados de UI/UX, logrando una plataforma más intuitiva y personalizable por el cliente.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Conecté los endpoints de múltiples microservicios al frontend, asegurando una integración robusta y coherente.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Implementé arquitectura de componentes escalable y mantenible para acelerar la incorporación de nuevos módulos.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Usé Claude Code e IA generativa (prompt engineering, skills y agentes) para elevar la calidad y velocidad del desarrollo.</li>
+                                </ul>
+                                <div class="exp-stats">
+                                    <span class="stat-chip"><i class="bi bi-diagram-3"></i> <strong>Microservicios</strong> integrados</span>
+                                    <span class="stat-chip"><i class="bi bi-robot"></i> Desarrollo asistido por <strong>IA</strong></span>
+                                    <span class="stat-chip"><i class="bi bi-shield-check"></i> Pruebas con <strong>Postman</strong></span>
+                                </div>
+                                <div class="exp-stack">
+                                    <span class="tech-chip"><i class="fa-brands fa-react"></i> React</span>
+                                    <span class="tech-chip"><i class="fa-solid fa-code"></i> TypeScript</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                    <span class="tech-chip"><i class="bi bi-send"></i> Postman</span>
+                                    <span class="tech-chip"><i class="bi bi-diagram-3"></i> Microservicios</span>
+                                    <span class="tech-chip"><i class="bi bi-anthropic"></i> Claude Code</span>
+                                </div>
                             </div>
-                        </div>
-                    </section>
+                        </article>
+
+                        <article class="timeline-item animate-on-scroll">
+                            <span class="timeline-marker" aria-hidden="true"></span>
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-title-block">
+                                        <div class="exp-role-line">
+                                            <h4 class="exp-role">Desarrollador Full Stack</h4>
+                                        </div>
+                                        <div class="exp-company">@ FuSoft - Uniempresarial</div>
+                                    </div>
+                                    <div class="exp-meta">
+                                        <span><i class="bi bi-calendar3"></i> Ene 2025 – Jul 2025</span>
+                                        <span class="exp-sep">·</span>
+                                        <span><i class="bi bi-geo-alt"></i> Bogotá D.C</span>
+                                    </div>
+                                </div>
+                                <p class="exp-summary">Desarrollé soluciones digitales para el observatorio universitario: una plataforma de búsqueda de eventos con IA, un sistema de automatización para gestoras y una aplicación móvil de directorio institucional.</p>
+                                <ul class="exp-bullets">
+                                    <li><i class="bi bi-check-circle-fill"></i> Diseñé e implementé una plataforma de búsqueda de eventos empresariales con IA, mejorando precisión y velocidad.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Automaticé la asignación y control de eventos para gestoras, eliminando errores manuales.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Contribuí al desarrollo de una app móvil de directorio digital para la comunidad universitaria.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Colaboré en equipo multidisciplinario bajo Scrum: sprints, demos y retrospectivas.</li>
+                                </ul>
+                                <div class="exp-stats">
+                                    <span class="stat-chip"><i class="bi bi-lightning-charge"></i> De días a <strong>segundos</strong> en búsquedas</span>
+                                    <span class="stat-chip"><i class="bi bi-people"></i> Metodología <strong>Scrum</strong></span>
+                                </div>
+                                <div class="exp-stack">
+                                    <span class="tech-chip"><i class="fa-brands fa-react"></i> React</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-python"></i> Python</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-java"></i> Spring Boot</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-square-js"></i> JavaScript</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                    <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    <span class="tech-chip"><i class="bi bi-anthropic"></i> IA</span>
+                                </div>
+                                <div class="exp-actions">
+                                    <a href="https://fabricasoluciones.uniempresarial.edu.co/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm btn-glow"><i class="bi bi-box-arrow-up-right me-1"></i> Ver empresa</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item animate-on-scroll animate-right">
+                            <span class="timeline-marker" aria-hidden="true"></span>
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-title-block">
+                                        <div class="exp-role-line">
+                                            <h4 class="exp-role">Aprendiz de Desarrollo de Software</h4>
+                                        </div>
+                                        <div class="exp-company">@ FIBRATELTEC S.A.S</div>
+                                    </div>
+                                    <div class="exp-meta">
+                                        <span><i class="bi bi-calendar3"></i> Feb 2024 – Jul 2024</span>
+                                        <span class="exp-sep">·</span>
+                                        <span><i class="bi bi-geo-alt"></i> Bogotá D.C</span>
+                                    </div>
+                                </div>
+                                <p class="exp-summary">Diseñé e implementé desde cero un ecosistema digital: sistema de inventario para técnicos de Claro y Movistar, apps móviles de gestión (ATS y herramientas) y página web corporativa.</p>
+                                <ul class="exp-bullets">
+                                    <li><i class="bi bi-check-circle-fill"></i> Reduje el tiempo de entrega de inventarios de 2 días a 4 horas.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Desarrollé automatización de reportes técnicos que liberó tiempo del equipo para tareas de mayor valor.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Implementé sistema de autenticación seguro con control de acceso por roles.</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Unifiqué soluciones en múltiples plataformas (web y móvil), mejorando la cohesión de los procesos internos.</li>
+                                </ul>
+                                <div class="exp-stats">
+                                    <span class="stat-chip"><i class="bi bi-graph-down-arrow"></i> <strong>↓83%</strong> tiempo de entrega</span>
+                                    <span class="stat-chip"><i class="bi bi-clock-history"></i> <strong>8h/sem</strong> ahorradas</span>
+                                    <span class="stat-chip"><i class="bi bi-people-fill"></i> <strong>+50</strong> usuarios internos</span>
+                                </div>
+                                <div class="exp-stack">
+                                    <span class="tech-chip"><i class="fa-brands fa-java"></i> Java</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-android"></i> Kotlin</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-square-js"></i> JavaScript</span>
+                                    <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                    <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
 
                     <section class="educacion-section animate-on-scroll animate-right">
                         <h2 class="text-primary fw-bolder mb-4 text-glow">Educación</h2>
@@ -129,42 +205,168 @@
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Habilidades profesionales</span></h3>
                                     </div>
                                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Desarrollo en aplicaciones moviles</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Diseño de interfaz de usuario</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Desarrollo Web</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Desarrollo de API's</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Base de datos</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Modelado y arquitectura</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Desarrollo Full Stack</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Aplicaciones móviles</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Diseño UI / UX</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Desarrollo de APIs</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Integración de microservicios</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">IA generativa &amp; Prompt Engineering</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Bases de datos</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Arquitectura hexagonal / capas</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Automatización de procesos</div></div>
                                     </div>
                                 </div>
+
                                 <div class="mb-5">
                                     <div class="d-flex align-items-center mb-4">
                                         <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Lenguajes</span></h3>
                                     </div>
-                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-html5 tech-icon me-2"></i>HTML</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-css3-alt tech-icon me-2"></i>CSS</div></div>
+                                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-html5 tech-icon me-2"></i>HTML5</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-css3-alt tech-icon me-2"></i>CSS3</div></div>
                                         <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-square-js tech-icon me-2"></i>JavaScript</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-code tech-icon me-2"></i>TypeScript</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-python tech-icon me-2"></i>Python</div></div>
                                         <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-java tech-icon me-2"></i>Java</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-database tech-icon me-2"></i>My SQL</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-php tech-icon me-2"></i>PHP</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-hashtag tech-icon me-2"></i>C#</div></div>
                                         <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-android tech-icon me-2"></i>Kotlin</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-php tech-icon me-2"></i>PHP</div></div>
                                     </div>
                                 </div>
+
                                 <div class="mb-5">
                                     <div class="d-flex align-items-center mb-4">
                                         <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-square"></i></div>
-                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Frameworks</span></h3>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Frameworks &amp; Librerías</span></h3>
                                     </div>
-                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-java tech-icon me-2"></i>Spring Boot</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-bootstrap tech-icon me-2"></i>Bootstrap</div></div>
-                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-node-js tech-icon me-2"></i>Node.js</div></div>
+                                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
                                         <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-react tech-icon me-2"></i>React</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-react tech-icon me-2"></i>React Native</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-node-js tech-icon me-2"></i>Node.js</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-java tech-icon me-2"></i>Spring Boot</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-python tech-icon me-2"></i>Django</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-wind tech-icon me-2"></i>Tailwind CSS</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-bootstrap tech-icon me-2"></i>Bootstrap</div></div>
                                     </div>
                                 </div>
+
+                                <div class="mb-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-hdd-network"></i></div>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Bases de datos &amp; Cloud</span></h3>
+                                    </div>
+                                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-database tech-icon me-2"></i>MySQL</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-leaf tech-icon me-2"></i>MongoDB</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-database tech-icon me-2"></i>PostgreSQL</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-aws tech-icon me-2"></i>AWS</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-microsoft tech-icon me-2"></i>Azure</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-solid fa-network-wired tech-icon me-2"></i>Aviatrix</div></div>
+                                    </div>
                                 </div>
+
+                                <div>
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-kanban"></i></div>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Herramientas &amp; Metodologías</span></h3>
+                                    </div>
+                                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-git-alt tech-icon me-2"></i>Git &amp; GitHub</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-microsoft tech-icon me-2"></i>Azure DevOps</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-send tech-icon me-2"></i>Postman</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-check2-square tech-icon me-2"></i>Cypress</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-bug tech-icon me-2"></i>Jest</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-shield-check tech-icon me-2"></i>SonarQube</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="fa-brands fa-figma tech-icon me-2"></i>Figma</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-bar-chart tech-icon me-2"></i>Power BI</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-people tech-icon me-2"></i>Scrum / Agile</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-diagram-2 tech-icon me-2"></i>BPMN</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-diagram-3 tech-icon me-2"></i>Microservicios</div></div>
+                                        <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><i class="bi bi-hexagon tech-icon me-2"></i>Arq. Hexagonal</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="animate-on-scroll animate-left">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-patch-check-fill"></i></div>
+                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Certificaciones</span></h3>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-2 g-3 mb-5">
+                            <div class="col">
+                                <div class="cert-card">
+                                    <div class="cert-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+                                    <div>
+                                        <h5 class="cert-title">Introducción a la Ciencia de Datos</h5>
+                                        <div class="cert-issuer">Santander Open Academy</div>
+                                        <div class="cert-date">Sep 2025</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="cert-card">
+                                    <div class="cert-icon"><i class="bi bi-controller"></i></div>
+                                    <div>
+                                        <h5 class="cert-title">Unity Essentials Pathway</h5>
+                                        <div class="cert-issuer">Unity</div>
+                                        <div class="cert-date">Nov 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="cert-card">
+                                    <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                                    <div>
+                                        <h5 class="cert-title">AWS Educate — Introduction to Cloud 101</h5>
+                                        <div class="cert-issuer">Amazon Web Services</div>
+                                        <div class="cert-date">Sep 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="cert-card">
+                                    <div class="cert-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+                                    <div>
+                                        <h5 class="cert-title">Multicloud Network Associate</h5>
+                                        <div class="cert-issuer">Aviatrix</div>
+                                        <div class="cert-date">Sep 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="cert-card">
+                                    <div class="cert-icon"><i class="fa-brands fa-microsoft"></i></div>
+                                    <div>
+                                        <h5 class="cert-title">Fundamentos Profesionales del Desarrollo de Software</h5>
+                                        <div class="cert-issuer">Microsoft &amp; LinkedIn</div>
+                                        <div class="cert-date">Ene 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="animate-on-scroll animate-right">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-translate"></i></div>
+                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Idiomas</span></h3>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-2 g-3 mb-5">
+                            <div class="col">
+                                <div class="language-item">
+                                    <span class="language-name"><i class="bi bi-globe-americas"></i> Español</span>
+                                    <span class="language-level">Nativo</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="language-item">
+                                    <span class="language-name"><i class="bi bi-globe-europe-africa"></i> Inglés</span>
+                                    <span class="language-level">B1 — Intermedio</span>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -176,7 +378,7 @@
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">
-                    <div class="small m-0 text-center">Copyright &copy; Portafolio 2024</div>
+                    <div class="small m-0 text-center">Copyright &copy; Portafolio 2026</div>
                 </div>
             </div>
         </div>
