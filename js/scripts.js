@@ -95,16 +95,66 @@ window.addEventListener('storage', function(e) {
 document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('cv-download-btn');
     var countDiv = document.getElementById('cv-download-count');
-    var count = localStorage.getItem('cvDownloadCount') || 0;
+    if (!btn || !countDiv) return;
+
+    var count = parseInt(localStorage.getItem('cvDownloadCount') || 0, 10);
     countDiv.textContent = `Descargas en este navegador: ${count}`;
 
     btn.addEventListener('click', function () {
         count++;
         localStorage.setItem('cvDownloadCount', count);
         countDiv.textContent = `Descargas en este navegador: ${count}`;
-        
-        // Mostrar notificación
         showNotification('CV descargado exitosamente', 'success');
+    });
+});
+
+// === Filtro de proyectos (pages/projects.html) ===
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const projectCards = document.querySelectorAll('.project-card[data-category]');
+    const emptyState = document.getElementById('projects-empty-state');
+    if (!filterButtons.length || !projectCards.length) return;
+
+    // Calcular contadores por categoría
+    const counts = { all: projectCards.length };
+    projectCards.forEach(card => {
+        const cats = (card.getAttribute('data-category') || '').split(/\s+/);
+        cats.forEach(cat => {
+            if (!cat) return;
+            counts[cat] = (counts[cat] || 0) + 1;
+        });
+    });
+
+    // Pintar contadores
+    document.querySelectorAll('.filter-count').forEach(el => {
+        const key = el.getAttribute('data-count');
+        if (counts[key] !== undefined) el.textContent = counts[key];
+    });
+
+    // Handler de filtros
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const filter = this.getAttribute('data-filter');
+
+            filterButtons.forEach(b => b.classList.remove('is-active'));
+            this.classList.add('is-active');
+
+            let visibleCount = 0;
+            projectCards.forEach(card => {
+                const cats = card.getAttribute('data-category') || '';
+                const matches = filter === 'all' || cats.split(/\s+/).includes(filter);
+                if (matches) {
+                    card.classList.remove('is-filtered-out');
+                    card.hidden = false;
+                    visibleCount++;
+                } else {
+                    card.classList.add('is-filtered-out');
+                    card.hidden = true;
+                }
+            });
+
+            if (emptyState) emptyState.hidden = visibleCount > 0;
+        });
     });
 });
 

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Proyectos</title>
+        <meta name="description" content="Proyectos desarrollados por Santiago Garcia Velandia — plataformas web con IA, apps móviles, sistemas de inventario, e-commerce y automatización empresarial. React, Node.js, Spring Boot, Kotlin y más." />
+        <meta name="author" content="Santiago Garcia Velandia" />
+        <meta name="keywords" content="proyectos, portafolio, EventConnect, TaskGo, ContractX, React, Node.js, Kotlin, IA, fullstack" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Proyectos · Santiago Garcia Velandia" />
+        <meta property="og:description" content="Colección de proyectos: plataformas web con IA, apps móviles, sistemas empresariales y más." />
+        <meta property="og:locale" content="es_CO" />
+        <title>Proyectos · Santiago Garcia Velandia</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,11 +29,11 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="resume.html">Experiencias</a></li>
-                                <li class="nav-item"><a class="nav-link" href="projects.html">Proyectos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                                <li class="nav-item"><i class="bi bi-moon nav-link" onclick="oscuro()" style="cursor: pointer;"></i></li>
+                                <li class="nav-item"><a class="nav-link nav-link-enhanced" href="../index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link nav-link-enhanced" href="resume.html">Experiencias</a></li>
+                                <li class="nav-item"><a class="nav-link nav-link-enhanced active" href="projects.html">Proyectos</a></li>
+                                <li class="nav-item"><a class="nav-link nav-link-enhanced" href="contact.html">Contacto</a></li>
+                                <li class="nav-item"><i id="dark-toggle-icon" class="bi bi-moon nav-link" onclick="oscuro()" style="cursor: pointer;" title="Cambiar modo" aria-label="Alternar modo oscuro" role="button"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -37,220 +42,380 @@
         <main class="flex-shrink-0">
             <section class="py-5">
                 <div class="container px-5 mb-5">
-                    <div class="text-center mb-5 animate-on-scroll">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline text-glow typewriter">Proyectos</span></h1>
+                    <div class="text-center mb-4 animate-on-scroll">
+                        <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline text-glow typewriter">Proyectos</span></h1>
+                        <p class="lead fw-light text-muted mb-0">Una selección de trabajos empresariales, personales y académicos</p>
                     </div>
+
+                    <!-- Filtros -->
+                    <div class="project-filters mb-5" role="tablist" aria-label="Filtrar proyectos por categoría">
+                        <button class="filter-chip is-active" data-filter="all" type="button"><i class="bi bi-grid-fill"></i> Todos <span class="filter-count" data-count="all"></span></button>
+                        <button class="filter-chip" data-filter="empresarial" type="button"><i class="bi bi-building"></i> Empresarial <span class="filter-count" data-count="empresarial"></span></button>
+                        <button class="filter-chip" data-filter="ia" type="button"><i class="bi bi-robot"></i> IA <span class="filter-count" data-count="ia"></span></button>
+                        <button class="filter-chip" data-filter="web" type="button"><i class="bi bi-globe"></i> Web <span class="filter-count" data-count="web"></span></button>
+                        <button class="filter-chip" data-filter="movil" type="button"><i class="bi bi-phone"></i> Móvil <span class="filter-count" data-count="movil"></span></button>
+                        <button class="filter-chip" data-filter="ecommerce" type="button"><i class="bi bi-cart-fill"></i> E-commerce <span class="filter-count" data-count="ecommerce"></span></button>
+                    </div>
+
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-left card-hover-effect">
-                                <img src="../assets/img/events.jpg" alt="EventConnect" class="project-img-top">
-                                <div class="card-body p-4">
-                                    <h4 class="mb-1">EventConnect | Fusoft-Uniempresarial <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-java tech-icon icon-bounce" title="Java"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
+
+                            <!-- Featured: ContractX (2026) -->
+                            <div class="project-card project-featured card shadow border-0 rounded-4 mb-5 animate-on-scroll card-hover-effect" data-category="empresarial ia" data-year="2026">
+                                <div class="featured-banner">
+                                    <div class="featured-visual" aria-hidden="true">
+                                        <div class="featured-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                                        <div class="featured-orbit"><i class="bi bi-diagram-3"></i></div>
+                                        <div class="featured-orbit featured-orbit-2"><i class="bi bi-shield-check"></i></div>
+                                        <div class="featured-orbit featured-orbit-3"><i class="bi bi-robot"></i></div>
                                     </div>
-                                    <p class="mb-2">
-                                        Desarrollé EventConnect, una plataforma web con inteligencia artificial que optimiza la búsqueda, gestión y difusión de eventos empresariales en el observatorio universitario. La solución integra un motor de búsqueda inteligente por sector, fecha, ubicación o palabras clave, y permite a empresas aliadas administrar sus propios eventos desde un panel exclusivo. Su interfaz amigable facilita el acceso centralizado a la oferta de eventos nacionales e internacionales, mejorando la visibilidad y promoción, y fortaleciendo los vínculos entre la universidad y el sector empresarial.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>Motor de búsqueda inteligente por sector, fecha, ubicación o palabras clave.</li>
-                                        <li>Panel exclusivo para empresas aliadas para gestionar eventos.</li>
-                                        <li>Interfaz centralizada y amigable para estudiantes y empresarios.</li>
-                                        <li>Mejora la visibilidad y promoción de eventos universitarios y empresariales.</li>
+                                    <span class="featured-badge"><i class="bi bi-star-fill"></i> Proyecto más reciente</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">ContractX <span class="project-org">| IT EXPERTS S.A.S</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Frontend Developer &amp; Integration Engineer</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> Ene 2026 – Jul 2026</span>
+                                                <span class="project-confidential"><i class="bi bi-lock-fill"></i> Confidencial</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-desc mb-3">Plataforma <strong>CLM (Contract Lifecycle Management)</strong> empresarial basada en microservicios. Lideré el frontend y la integración con múltiples microservicios del backend, aplicando principios avanzados de UI/UX para lograr una plataforma configurable y personalizable por cada cliente.</p>
+                                    <ul class="project-bullets">
+                                        <li><i class="bi bi-check-circle-fill"></i> Rediseño UI/UX de la plataforma con arquitectura de componentes escalable.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Integración de endpoints de múltiples microservicios al frontend.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Pruebas funcionales con Postman para validar contratos de API y flujos de negocio.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Uso de Claude Code e IA generativa para acelerar el desarrollo.</li>
                                     </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/GnPNNgU475E">Live Demo</a>
+                                    <div class="project-stats mb-3">
+                                        <span class="stat-chip"><i class="bi bi-diagram-3"></i> <strong>Microservicios</strong></span>
+                                        <span class="stat-chip"><i class="bi bi-robot"></i> <strong>IA generativa</strong></span>
+                                        <span class="stat-chip"><i class="bi bi-shield-check"></i> <strong>Postman</strong></span>
+                                    </div>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-react"></i> React</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-code"></i> TypeScript</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                        <span class="tech-chip"><i class="bi bi-diagram-3"></i> Microservicios</span>
+                                        <span class="tech-chip"><i class="bi bi-send"></i> Postman</span>
+                                        <span class="tech-chip"><i class="bi bi-anthropic"></i> Claude Code</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <span class="btn btn-outline-secondary btn-sm disabled" aria-disabled="true"><i class="bi bi-lock-fill me-1"></i> Demo no disponible</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 project-card-taskgo animate-on-scroll animate-right card-hover-effect">
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-left card-hover-effect" data-category="empresarial ia" data-year="2025">
+                                <img src="../assets/img/events.jpg" alt="EventConnect — plataforma web con IA para búsqueda y gestión de eventos empresariales" class="project-img-top" loading="lazy" decoding="async">
+                                <div class="card-body p-4">
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">EventConnect <span class="project-org">| FuSoft — Uniempresarial</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Fullstack Developer con IA</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2025</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-desc mb-3">Plataforma web con <strong>inteligencia artificial</strong> que optimiza la búsqueda, gestión y difusión de eventos empresariales en el observatorio universitario. Integra un motor de búsqueda inteligente por sector, fecha, ubicación o palabras clave, y permite a empresas aliadas administrar sus propios eventos desde un panel exclusivo.</p>
+                                    <ul class="project-bullets">
+                                        <li><i class="bi bi-check-circle-fill"></i> Motor de búsqueda inteligente por sector, fecha, ubicación o palabras clave.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Panel exclusivo para empresas aliadas.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Interfaz centralizada para estudiantes y empresarios.</li>
+                                    </ul>
+                                    <div class="project-stats mb-3">
+                                        <span class="stat-chip"><i class="bi bi-lightning-charge"></i> De <strong>días a segundos</strong></span>
+                                        <span class="stat-chip"><i class="bi bi-robot"></i> Búsqueda con <strong>IA</strong></span>
+                                    </div>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-java"></i> Java</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/GnPNNgU475E"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 project-card-taskgo animate-on-scroll animate-right card-hover-effect" data-category="empresarial movil web" data-year="2025">
                                 <div class="card-body p-4">
                                     <div class="d-flex flex-column flex-md-row align-items-md-center mb-3">
                                         <div class="project-img-container taskgo-img-container">
-                                            <img src="../assets/img/taskgo.jpeg" alt="TaskGo" class="img-fluid project-img-phone">
+                                            <img src="../assets/img/taskgo.jpeg" alt="TaskGo — app móvil y web para tarjeteros digitales de profesionales" class="img-fluid project-img-phone" loading="lazy" decoding="async">
                                         </div>
                                         <div class="taskgo-content">
-                                            <h4 class="mb-1">TaskGo | Fusoft-Uniempresarial <span class="text-primary">| Desarrollador</span></h4>
-                                            <div class="mb-2">
-                                               <i class="fa-brands fa-java tech-icon icon-bounce" title="Java"></i>
-                                               <i class="fa-brands fa-android tech-icon me-2 icon-bounce" title="Kotlin"></i>
-                                               <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                               <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                               <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
-                                               <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
+                                            <div class="project-header">
+                                                <div>
+                                                    <h4 class="project-title mb-1">TaskGo <span class="project-org">| FuSoft — Uniempresarial</span></h4>
+                                                    <div class="project-meta">
+                                                        <span class="project-role"><i class="bi bi-person-workspace"></i> Mobile &amp; Web Fullstack</span>
+                                                        <span class="project-date"><i class="bi bi-calendar3"></i> 2025</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p class="mb-2">
-                                                Desarrollé una aplicación móvil y web para automatizar y controlar la información de los profesionales de cualquier empresa a partir de tarjeteros digitales. Los empleados son registrados en la app, y luego en la web permite consultar su información de forma rápida, eficiente y sin preocuparse por daños físicos o pérdida de datos.
-                                            </p>
-                                            <ul class="mb-2">
-                                                <li>Implementación de tarjeteros digitales para la gestión centralizada de profesionales, eliminando el uso de registros físicos.</li>
-                                                <li>Optimización en la planificación de rutas y actividades, reduciendo tiempos de gestión y mejorando la productividad.</li>
-                                                <li>Digitalización del registro de asistencias y evidencias, garantizando trazabilidad y disponibilidad en tiempo real.</li>
-                                                <li>Generación automática de reportes confiables para auditorías y procesos de pago, minimizando errores manuales.</li>
+                                            <p class="project-desc mb-3">Aplicación móvil y web para <strong>automatizar y controlar la información</strong> de los profesionales de cualquier empresa mediante tarjeteros digitales. Los empleados se registran en la app y la web permite consultar su información de forma rápida y segura, eliminando registros físicos y evitando pérdidas de datos.</p>
+                                            <ul class="project-bullets">
+                                                <li><i class="bi bi-check-circle-fill"></i> Tarjeteros digitales para gestión centralizada de profesionales.</li>
+                                                <li><i class="bi bi-check-circle-fill"></i> Digitalización de asistencias y evidencias con trazabilidad en tiempo real.</li>
+                                                <li><i class="bi bi-check-circle-fill"></i> Generación automática de reportes para auditorías y pagos.</li>
                                             </ul>
-                                            <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/udcueVfry3Y">Live Demo</a>
+                                            <div class="project-stack mb-3">
+                                                <span class="tech-chip"><i class="fa-brands fa-android"></i> Kotlin</span>
+                                                <span class="tech-chip"><i class="fa-brands fa-java"></i> Java</span>
+                                                <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                                <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                                <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                                <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                            </div>
+                                            <div class="project-actions">
+                                                <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/udcueVfry3Y"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                                <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll card-hover-effect">
-                                <img src="../assets/img/camara.png" alt="camara" class="project-img-top">
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll card-hover-effect" data-category="empresarial ia web" data-year="2025">
+                                <img src="../assets/img/camara.png" alt="Proyecto Cámara de Comercio de Bogotá — aplicación web para gestión de consultores en formación empresarial" class="project-img-top" loading="lazy" decoding="async">
                                 <div class="card-body p-4">
-                                    <h4 class="mb-1">Proyecto Cámara de Comercio de Bogotá | Fusoft-Uniempresarial <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-react tech-icon icon-bounce" title="React"></i>
-                                        <i class="fa-brands fa-node-js tech-icon icon-bounce" title="Node.js"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">Cámara de Comercio de Bogotá <span class="project-org">| FuSoft — Uniempresarial</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Fullstack Developer con IA</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2025</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="mb-2">
-                                        Desarrollé una aplicación web inteligente para optimizar la gestión de consultores en programas de formación empresarial. La solución digitaliza la selección de consultores con IA, facilita la planificación de actividades, centraliza el registro de evidencias y genera reportes automáticos para validar horas trabajadas, mejorando la eficiencia, trazabilidad y transparencia de los procesos.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>Digitalización y automatización de la selección de consultores.</li>
-                                        <li>Planificación eficiente de rutas y actividades.</li>
-                                        <li>Registro centralizado de evidencias y asistencias.</li>
-                                        <li>Reportes automáticos y confiables para auditorías y pagos.</li>
+                                    <p class="project-desc mb-3">Aplicación web inteligente para optimizar la gestión de consultores en <strong>programas de formación empresarial</strong>. Digitaliza la selección de consultores con IA, facilita la planificación de actividades, centraliza el registro de evidencias y genera reportes automáticos para validar horas trabajadas.</p>
+                                    <ul class="project-bullets">
+                                        <li><i class="bi bi-check-circle-fill"></i> Digitalización y automatización de la selección de consultores.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Planificación eficiente de rutas y actividades.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Reportes automáticos para auditorías y pagos.</li>
                                     </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/94HXB9n_Iv4">Live Demo</a>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-react"></i> React</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/94HXB9n_Iv4"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-right card-hover-effect">
-                                <img src="../assets/img/barberia.jpg" alt="barberia" class="project-img-top">
-                                <div class="card-body p-4">
-                                    <h4 class="mb-1">La Mafia Barber Club <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
-                                        <i class="fa-brands fa-square-js tech-icon icon-bounce" title="JavaScript"></i>
-                                        <i class="fa-brands fa-python tech-icon icon-bounce" title="Python"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                    </div>
-                                    <p class="mb-2">
-                                        Desarollé una plataforma web para la gestión de reservas en una barbería, automatizando por completo el proceso de agendamiento de citas y control de cortes. Esta solución redujo significativamente el tiempo de gestión, pasando de horas a segundos, mejorando así la eficiencia operativa y la experiencia del cliente.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>+30 clientes gestionados en el dia.</li>
-                                        <li>+25 productos gestionados.</li>
-                                        <li>Agendamiento de citas en línea.</li>
-                                        <li>Control de cortes y productos.</li>
-                                        <li>Control de clientes y sus reservas.</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/6o7ZiRQnG1E">Live Demo</a>
-                                </div>
-                            </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-left card-hover-effect">
-                                <img src="../assets/img/Tienda Online.png" alt="Tienda Online - venta de Fibra Óptica" class="project-img-top">
-                                <div class="card-body p-4">
-                                    <h4 class="mb-1">Tienda Online <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-php tech-icon icon-bounce" title="PHP"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                    </div>
-                                    <p class="mb-2">
-                                        Plataforma web para la venta de fibra óptica, permitiendo a los usuarios realizar compras y gestionar pedidos en línea. El objetivo fue digitalizar el proceso de ventas y mejorar la experiencia del cliente.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>+200 productos gestionados.</li>
-                                        <li>Integración de pagos en línea.</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/E2MVY8gwAMY">Live Demo</a>
-                                </div>
-                            </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll card-hover-effect">
-                                <img src="../assets/img/Inventarios.png" alt="Página de Inventarios - gestión y control" class="project-img-top">
-                                <div class="card-body p-4">
-                                    <h4 class="mb-1">Página de Inventarios <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-html5 tech-icon icon-bounce" title="HTML5"></i>
-                                        <i class="fa-brands fa-css3-alt tech-icon icon-bounce" title="CSS3"></i>
-                                        <i class="fa-brands fa-bootstrap tech-icon icon-bounce" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-php tech-icon icon-bounce" title="PHP"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
-                                    </div>
-                                    <p class="mb-2">
-                                        Sistema para la gestión y control de inventarios de equipos y materiales, facilitando el seguimiento y la trazabilidad en tiempo real.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>Reducción de errores de inventario en un 90%.</li>
-                                        <li>+100 usuarios activos mensuales.</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/ZeT3y1-_LXo">Live Demo</a>
-                                </div>
-                            </div>
-                            <div class="card shadow border-0 rounded-4 mb-5 project-card-ats animate-on-scroll animate-right card-hover-effect">
+
+                            <div class="card project-card shadow border-0 rounded-4 mb-5 project-card-ats animate-on-scroll animate-right card-hover-effect" data-category="empresarial movil" data-year="2024">
                                 <div class="card-body p-4">
                                     <div class="d-flex flex-column flex-md-row align-items-md-center mb-3">
                                         <div class="project-img-container">
-                                            <img src="../assets/img/ats.jpeg" alt="Aplicación ATS - gestión de técnicos" class="img-fluid project-img-ats">
+                                            <img src="../assets/img/ats.jpeg" alt="Aplicación ATS — app móvil para gestión y reportes de técnicos en campo" class="img-fluid project-img-ats" loading="lazy" decoding="async">
                                         </div>
                                         <div class="ats-content">
-                                            <h4 class="mb-1">Aplicación ATS <span class="text-primary">| Desarrollador</span></h4>
-                                            <div class="mb-2">
-                                                <i class="fa-brands fa-java tech-icon icon-bounce" title="Java"></i>
-                                                <i class="fa-brands fa-android tech-icon me-2 icon-bounce" title="Kotlin"></i>
-                                                <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
+                                            <div class="project-header">
+                                                <div>
+                                                    <h4 class="project-title mb-1">Aplicación ATS <span class="project-org">| FIBRATELTEC S.A.S</span></h4>
+                                                    <div class="project-meta">
+                                                        <span class="project-role"><i class="bi bi-person-workspace"></i> Mobile Developer</span>
+                                                        <span class="project-date"><i class="bi bi-calendar3"></i> 2024</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p class="mb-2">
-                                                App móvil para la gestión de actividades de los técnicos ATS, permitiendo reportes y seguimiento en campo desde dispositivos móviles.
-                                            </p>
-                                            <ul class="mb-2">
-                                                <li>Automatización de reportes técnicos.</li>
-                                                <li>Optimización de tiempos de respuesta.</li>
+                                            <p class="project-desc mb-3">App móvil para la gestión de actividades de los técnicos ATS, permitiendo <strong>reportes y seguimiento en campo</strong> desde dispositivos móviles.</p>
+                                            <ul class="project-bullets">
+                                                <li><i class="bi bi-check-circle-fill"></i> Automatización de reportes técnicos.</li>
+                                                <li><i class="bi bi-check-circle-fill"></i> Optimización de tiempos de respuesta.</li>
                                             </ul>
-                                            <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtube.com/shorts/h9pwtPfr0bY">Live Demo</a>
+                                            <div class="project-stats mb-3">
+                                                <span class="stat-chip"><i class="bi bi-clock-history"></i> <strong>8h/sem</strong> ahorradas</span>
+                                            </div>
+                                            <div class="project-stack mb-3">
+                                                <span class="tech-chip"><i class="fa-brands fa-android"></i> Kotlin</span>
+                                                <span class="tech-chip"><i class="fa-brands fa-java"></i> Java</span>
+                                                <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                            </div>
+                                            <div class="project-actions">
+                                                <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtube.com/shorts/h9pwtPfr0bY"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                                <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-scale card-hover-effect">
-                                <img src="../assets/img/herramientas.jpeg" alt="Aplicación Herramientas - gestión de herramientas para técnicos" class="project-img-top">
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-scale card-hover-effect" data-category="empresarial movil" data-year="2024">
+                                <img src="../assets/img/herramientas.jpeg" alt="Aplicación Herramientas — gestión y control de herramientas entregadas a técnicos" class="project-img-top" loading="lazy" decoding="async">
                                 <div class="card-body p-4">
-                                    <h4 class="mb-1">Aplicación Herramientas <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-android tech-icon me-2 icon-bounce" title="Kotlin"></i>
-                                        <i class="fa-brands fa-php tech-icon icon-bounce" title="PHP"></i>
-                                        <i class="fa-solid fa-database tech-icon icon-bounce" title="MySQL"></i>
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">Aplicación Herramientas <span class="project-org">| FIBRATELTEC S.A.S</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Mobile Developer</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2024</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="mb-2">
-                                        Aplicación para la gestión y control de herramientas entregadas a los técnicos, con registro de entregas y devoluciones.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>Control eficiente de inventario de herramientas.</li>
-                                        <li>Reducción de pérdidas y extravíos.</li>
+                                    <p class="project-desc mb-3">Aplicación móvil para la <strong>gestión y control de herramientas</strong> entregadas a técnicos, con registro de entregas y devoluciones.</p>
+                                    <ul class="project-bullets">
+                                        <li><i class="bi bi-check-circle-fill"></i> Control eficiente de inventario de herramientas.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Reducción de pérdidas y extravíos.</li>
                                     </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtube.com/shorts/_IFJHW0CyIE">Live Demo</a>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-android"></i> Kotlin</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtube.com/shorts/_IFJHW0CyIE"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-card card shadow border-0 rounded-4 mb-5">
-                                <img src="../assets/img/kanillu.png" alt="Inventario Heladería Kanillu - gestión administrativa" class="project-img-top">
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll card-hover-effect" data-category="empresarial web" data-year="2024">
+                                <img src="../assets/img/Inventarios.png" alt="Página de Inventarios — sistema web para gestión y control de equipos y materiales" class="project-img-top" loading="lazy" decoding="async">
                                 <div class="card-body p-4">
-                                    <h4 class="mb-1">Inventario Heladería Kanillu <span class="text-primary">| Desarrollador</span></h4>
-                                    <div class="mb-2">
-                                        <i class="fa-brands fa-java tech-icon" title="Java"></i>
-                                        <i class="fa-brands fa-bootstrap tech-icon" title="Bootstrap"></i>
-                                        <i class="fa-brands fa-square-js tech-icon" title="JavaScript"></i>
-                                        <i class="fa-brands fa-html5 tech-icon" title="HTML5"></i>
-                                            <i class="fa-brands fa-css3-alt tech-icon" title="CSS3"></i>
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">Página de Inventarios <span class="project-org">| FIBRATELTEC S.A.S</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Fullstack Developer</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2024</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="mb-2">
-                                        Aplicación web para la gestión administrativa de una heladería, controlando inventarios, ventas y reportes automáticos.
-                                    </p>
-                                    <ul class="mb-2">
-                                        <li>Automatización de reportes de ventas.</li>
-                                        <li>Mejora en la gestión de inventarios y reducción de errores.</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary btn-sm live-demo-btn" data-youtube="">Live Demo</a>
+                                    <p class="project-desc mb-3">Sistema web para la <strong>gestión y control de inventarios</strong> de equipos y materiales, facilitando el seguimiento y la trazabilidad en tiempo real para técnicos de Claro y Movistar.</p>
+                                    <div class="project-stats mb-3">
+                                        <span class="stat-chip"><i class="bi bi-graph-down-arrow"></i> <strong>↓90%</strong> errores</span>
+                                        <span class="stat-chip"><i class="bi bi-people-fill"></i> <strong>+100</strong> usuarios/mes</span>
+                                    </div>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/ZeT3y1-_LXo"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-right card-hover-effect" data-category="web" data-year="2024">
+                                <img src="../assets/img/barberia.jpg" alt="La Mafia Barber Club — plataforma web de reservas y gestión para barbería" class="project-img-top" loading="lazy" decoding="async">
+                                <div class="card-body p-4">
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">La Mafia Barber Club <span class="project-org">| Cliente independiente</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Solo Developer</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-desc mb-3">Plataforma web para <strong>gestión de reservas de barbería</strong>, automatizando el agendamiento de citas y el control de cortes. Redujo el tiempo de gestión de horas a segundos.</p>
+                                    <ul class="project-bullets">
+                                        <li><i class="bi bi-check-circle-fill"></i> Agendamiento de citas en línea.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Control de cortes, productos y clientes.</li>
+                                    </ul>
+                                    <div class="project-stats mb-3">
+                                        <span class="stat-chip"><i class="bi bi-people-fill"></i> <strong>+30</strong> clientes/día</span>
+                                        <span class="stat-chip"><i class="bi bi-box-seam"></i> <strong>+25</strong> productos</span>
+                                    </div>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-python"></i> Python</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-square-js"></i> JavaScript</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/6o7ZiRQnG1E"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll animate-left card-hover-effect" data-category="ecommerce web" data-year="2023">
+                                <img src="../assets/img/Tienda Online.png" alt="Tienda Online — plataforma e-commerce para venta de fibra óptica" class="project-img-top" loading="lazy" decoding="async">
+                                <div class="card-body p-4">
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">Tienda Online — Fibra Óptica <span class="project-org">| Proyecto personal</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Solo Developer</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-desc mb-3">Plataforma e-commerce para la <strong>venta de fibra óptica</strong>, permitiendo a los usuarios realizar compras y gestionar pedidos en línea.</p>
+                                    <div class="project-stats mb-3">
+                                        <span class="stat-chip"><i class="bi bi-box-seam"></i> <strong>+200</strong> productos</span>
+                                        <span class="stat-chip"><i class="bi bi-credit-card"></i> Pagos en línea</span>
+                                    </div>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                        <span class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn btn-primary btn-sm live-demo-btn btn-glow" data-youtube="https://youtu.be/E2MVY8gwAMY"><i class="bi bi-play-circle-fill me-1"></i> Ver demo</a>
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card card shadow border-0 rounded-4 mb-5 animate-on-scroll card-hover-effect" data-category="web" data-year="2023">
+                                <img src="../assets/img/kanillu.png" alt="Inventario Heladería Kanillu — app web de gestión administrativa, ventas y reportes" class="project-img-top" loading="lazy" decoding="async">
+                                <div class="card-body p-4">
+                                    <div class="project-header">
+                                        <div>
+                                            <h4 class="project-title mb-1">Inventario Heladería Kanillu <span class="project-org">| Proyecto académico</span></h4>
+                                            <div class="project-meta">
+                                                <span class="project-role"><i class="bi bi-person-workspace"></i> Solo Developer</span>
+                                                <span class="project-date"><i class="bi bi-calendar3"></i> 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-desc mb-3">Aplicación web para la <strong>gestión administrativa</strong> de una heladería, controlando inventarios, ventas y generando reportes automáticos.</p>
+                                    <ul class="project-bullets">
+                                        <li><i class="bi bi-check-circle-fill"></i> Automatización de reportes de ventas.</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Reducción de errores en gestión de inventarios.</li>
+                                    </ul>
+                                    <div class="project-stack mb-3">
+                                        <span class="tech-chip"><i class="fa-brands fa-java"></i> Java</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-square-js"></i> JavaScript</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                                        <span class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="https://github.com/SantiagoGV2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm btn-glow"><i class="bi bi-github me-1"></i> Ver código</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Estado vacío para cuando ningún proyecto coincida con el filtro -->
+                            <div id="projects-empty-state" class="empty-state" hidden>
+                                <i class="bi bi-search"></i>
+                                <p>No hay proyectos en esta categoría todavía. ¡Pronto!</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -268,7 +433,7 @@
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div>
-                        <div class="small m-0 text-center">Copyright &copy; Portafolio 2024</div>
+                        <div class="small m-0 text-center">Copyright &copy; Portafolio 2026</div>
                     </div>
                 </div>
             </div>
